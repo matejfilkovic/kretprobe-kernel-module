@@ -1,3 +1,5 @@
+# kretprobe-kernel-module
+
 This is an example kernel module which shows the use of return probes to report
 total time taken for a probed function to run. To measure time,
 module configures and reads cycles directly from PMU unit. The sample
