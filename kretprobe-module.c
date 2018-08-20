@@ -26,7 +26,9 @@ static int returnHandler(struct kretprobe_instance *i, struct pt_regs *regs) {
    asm volatile("mcr p15, 0, %0, c9, c12, 5" : : "r"(0x0));
    asm volatile("mrc p15, 0, %0, c9, c13, 2" : "=r"(secondReading));
 
-   printk("kretprobe_module: exiting from udp_v4_get_port, first reading: %d, second reading %d .\n", firstReading, secondReading);
+   printk("kretprobe_module: exiting from udp_v4_get_port, first reading: %d, second reading %d .\n",
+          firstReading,
+          secondReading);
 
    return 0;
 }
